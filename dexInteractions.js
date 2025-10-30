@@ -25,11 +25,13 @@ async function realizarSwap(dex, cantidad, tokenOrigen, tokenDestino) {
 // function to get the price of AVAX in terms of WETH
 async function getLatestPrices() {
   try {
-      console.log("Antes del error")
+      // console.log("Antes del error")
       const reservesTraderJoe = await traderJoePair.getReserves();
       console.log("Reservas de Trader Joe:", reservesTraderJoe);
       const reservesPangolin = await pangolinPair.getReserves();
       const reservesSushi = await sushiPair.getReserves();
+      console.log("Reservas de Pangolin", reservesPangolin);
+      console.log("Reservas de SushiSwap:", reservesSushi);
 
       // Convertir las reservas de wei a Ether
       const reserveAVAXTraderJoe = ethers.formatUnits(reservesTraderJoe[0], 'wei');
