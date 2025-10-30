@@ -1,0 +1,64 @@
+# Node dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and runtime data
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.seed
+*.pid.lock
+
+# Build and coverage output
+dist/
+build/
+lib/
+tmp/
+temp/
+coverage/
+.nyc_output/
+.cache/
+
+# Framework-specific caches
+.next/
+.nuxt/
+out/
+
+# Yarn v2+ files
+.pnp/
+.pnp.js
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Tooling
+.eslintcache
+*.tsbuildinfo
+
+# Dependency lockfiles (non-Yarn)
+package-lock.json
+pnpm-lock.yaml
+shrinkwrap.yaml
+
+# Editor and OS files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
