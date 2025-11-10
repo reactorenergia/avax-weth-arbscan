@@ -1,13 +1,15 @@
-# Avalanche WETH ↔ WAVAX Arb Scan
+# Avalanche WETH <-> WAVAX Arb Scan
 
-Picture this: your bot wakes up on Avalanche mainnet, racing through Trader Joe, SushiSwap, and Pangolin to see who mispriced the WETH/WAVAX pair. All it needs is an RPC endpoint, a few pool addresses, and the green light from you. Point it at the public RPC below (or swap in your own favorite endpoint), load the environment variables, and it will start streaming prices straight from the C-Chain.
+Point it at the public RPC below (or your own favorite endpoint), load the environment variables, and it will start streaming prices straight from the C-Chain.
 
 ## Quick Start
 
-1. Duplicate `.env.example` or create a new `.env`.
+1. Create a new `.env`.
 2. Fill in the variables listed in the table below (custom RPC endpoints work fine as long as they speak Avalanche C-Chain).
-3. Install dependencies with `yarn` or `npm install`.
-4. Run the scanner with `node index.js` (or your preferred runner).
+3. Install dependencies with `yarn`.
+4. Run the scanner with `node index.js` 
+
+![ejemplo](./example.png)
 
 ## Environment Variables
 
@@ -35,8 +37,7 @@ Picture this: your bot wakes up on Avalanche mainnet, racing through Trader Joe,
 
 ## Troubleshooting
 
-- RPC 429/503: throttle requests or rotate to a private RPC.
 - Missing ENV: double-check `.env` is loaded before launching the script.
-- Weird prices: confirm pool addresses match mainnet and contracts are synced.
+- Weird prices: confirm pool addresses match mainnet
 
 Happy hunting on the C-Chain!
