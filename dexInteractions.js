@@ -5,6 +5,7 @@ const {joeABI, pangolinPairABI, sushiPairABI} = require('./abi/dexes.js');
 // Data initialization 
 const rpcProvider = process.env.MAINNET_RPC_PROVIDER;
 const provider = new ethers.JsonRpcProvider(rpcProvider);
+
 let traderJoePairAddress, pangolinPairAddress, sushiPairAddress;
 traderJoePairAddress = process.env.TRADER_JOE_PAIR_WETH_WAVAX_MAINNET;
 pangolinPairAddress = process.env.PANGOLIN_PAIR_WETH_WAVAX_MAINNET;
@@ -66,19 +67,18 @@ async function getLatestPrices() {
 
       console.log(`MENOR PRECIO: ${menorPrecioDex} (${menorValor})`);
       console.log(`MAYOR PRECIO: ${mayorPrecioDex} (${mayorValor})`);
-      console.log(`Mayor precio: ${mayorPrecio}. Diferencia porcentual: ${diferenciaPorcentaje.toFixed(7)}%`);
+      console.log(`Diferencia porcentual: ${diferenciaPorcentaje.toFixed(7)}%`);
         
       //Comprobar si la diferencia supera el umbral
 
         if (diferenciaPorcentaje > 0.4) {
-          console.log('\x1b[36m%s\x1b[0m', 'Oportunidad de Swap en Pangolin y Sushi \x1b[0m');
+          console.log('\x1b[36m%s\x1b[0m', 'Oportunidad de Swap de ${menorPrecioDex} a ${mayorPrecioDex} | ${ruta} \x1b[0m');
           // await realizarSwap(); ---
         }
         return {
             traderJoePrice: priceTraderJoe,
             pangolinPrice: pricePangolin,
             sushiPrice: priceSushi,
-            mayorPrecio,
             diferenciaPorcentaje: diferenciaPorcentaje.toFixed(2)
         };
     } catch (error) {
