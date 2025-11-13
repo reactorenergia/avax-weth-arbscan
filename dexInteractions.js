@@ -72,7 +72,7 @@ async function getLatestPrices() {
       //Comprobar si la diferencia supera el umbral
 
         if (diferenciaPorcentaje > 0.4) {
-          console.log('\x1b[36m%s\x1b[0m', 'Oportunidad de Swap de ${menorPrecioDex} a ${mayorPrecioDex} | ${ruta} \x1b[0m');
+          console.log('\x1b[36m%s\x1b[0m', `Oportunidad de Swap de ${menorPrecioDex} a ${mayorPrecioDex} \x1b[0m`);
           // await realizarSwap(); ---
         }
         return {
