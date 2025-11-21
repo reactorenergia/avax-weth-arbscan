@@ -33,6 +33,10 @@ Point it at the public RPC below (or your own favorite endpoint), load the envir
 ## Running Scripts
 
 - `node index.js` — baseline scanner that polls all pools and logs price spreads.
+
+## TODO
+
+Add liquid trade-size
 - `node dexInteractions.js` — direct call helper for individual DEX reads/writes.
 
 ## Troubleshooting
