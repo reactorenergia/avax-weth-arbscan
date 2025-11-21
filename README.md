@@ -1,4 +1,4 @@
-# Avalanche WETH <-> WAVAX Arb Scan
+# Avalanche WETH <-> WAVAX Arbitrage Scan
 
 Point it at the public RPC below (or your own favorite endpoint), load the environment variables, and it will start streaming prices straight from the C-Chain.
 
@@ -33,11 +33,12 @@ Point it at the public RPC below (or your own favorite endpoint), load the envir
 ## Running Scripts
 
 - `node index.js` — baseline scanner that polls all pools and logs price spreads.
+- `node dexInteractions.js` — direct call helper for individual DEX reads/writes.
 
 ## TODO
 
-Add liquid trade-size
-- `node dexInteractions.js` — direct call helper for individual DEX reads/writes.
+- Add liquid trade-size curve
+- Add Smart Contract
 
 ## Troubleshooting
 
